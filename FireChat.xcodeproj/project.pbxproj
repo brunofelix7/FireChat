@@ -10,9 +10,9 @@
 		AC10CD6E28C8438A00F54E57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC10CD6D28C8438A00F54E57 /* AppDelegate.swift */; };
 		AC10CD7028C8438A00F54E57 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC10CD6F28C8438A00F54E57 /* SceneDelegate.swift */; };
 		AC10CD7228C8438A00F54E57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC10CD7128C8438A00F54E57 /* ViewController.swift */; };
-		AC10CD7528C8438A00F54E57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC10CD7328C8438A00F54E57 /* Main.storyboard */; };
 		AC10CD7728C8438C00F54E57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC10CD7628C8438C00F54E57 /* Assets.xcassets */; };
 		AC10CD7A28C8438C00F54E57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC10CD7828C8438C00F54E57 /* LaunchScreen.storyboard */; };
+		AC10CD8828C8444D00F54E57 /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC10CD8728C8444D00F54E57 /* ConversationsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +20,10 @@
 		AC10CD6D28C8438A00F54E57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC10CD6F28C8438A00F54E57 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AC10CD7128C8438A00F54E57 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AC10CD7428C8438A00F54E57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC10CD7628C8438C00F54E57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC10CD7928C8438C00F54E57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC10CD7B28C8438C00F54E57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC10CD8728C8444D00F54E57 /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,63 @@
 		AC10CD6C28C8438A00F54E57 /* FireChat */ = {
 			isa = PBXGroup;
 			children = (
+				AC10CD8628C843EF00F54E57 /* Model */,
+				AC10CD8528C843EC00F54E57 /* View */,
+				AC10CD8428C843EA00F54E57 /* ViewModel */,
+				AC10CD8328C843E700F54E57 /* Controller */,
+				AC10CD8228C843E200F54E57 /* API */,
+				AC10CD8128C843B900F54E57 /* Utils */,
 				AC10CD6D28C8438A00F54E57 /* AppDelegate.swift */,
 				AC10CD6F28C8438A00F54E57 /* SceneDelegate.swift */,
 				AC10CD7128C8438A00F54E57 /* ViewController.swift */,
-				AC10CD7328C8438A00F54E57 /* Main.storyboard */,
 				AC10CD7628C8438C00F54E57 /* Assets.xcassets */,
 				AC10CD7828C8438C00F54E57 /* LaunchScreen.storyboard */,
 				AC10CD7B28C8438C00F54E57 /* Info.plist */,
 			);
 			path = FireChat;
+			sourceTree = "<group>";
+		};
+		AC10CD8128C843B900F54E57 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		AC10CD8228C843E200F54E57 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		AC10CD8328C843E700F54E57 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AC10CD8728C8444D00F54E57 /* ConversationsController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AC10CD8428C843EA00F54E57 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AC10CD8528C843EC00F54E57 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AC10CD8628C843EF00F54E57 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +175,6 @@
 			files = (
 				AC10CD7A28C8438C00F54E57 /* LaunchScreen.storyboard in Resources */,
 				AC10CD7728C8438C00F54E57 /* Assets.xcassets in Resources */,
-				AC10CD7528C8438A00F54E57 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +187,7 @@
 			files = (
 				AC10CD7228C8438A00F54E57 /* ViewController.swift in Sources */,
 				AC10CD6E28C8438A00F54E57 /* AppDelegate.swift in Sources */,
+				AC10CD8828C8444D00F54E57 /* ConversationsController.swift in Sources */,
 				AC10CD7028C8438A00F54E57 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +195,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AC10CD7328C8438A00F54E57 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AC10CD7428C8438A00F54E57 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AC10CD7828C8438C00F54E57 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -291,7 +331,6 @@
 				INFOPLIST_FILE = FireChat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -318,7 +357,6 @@
 				INFOPLIST_FILE = FireChat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
