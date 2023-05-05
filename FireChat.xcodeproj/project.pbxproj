@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		AC10CD6E28C8438A00F54E57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC10CD6D28C8438A00F54E57 /* AppDelegate.swift */; };
 		AC10CD7028C8438A00F54E57 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC10CD6F28C8438A00F54E57 /* SceneDelegate.swift */; };
-		AC10CD7228C8438A00F54E57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC10CD7128C8438A00F54E57 /* ViewController.swift */; };
 		AC10CD7728C8438C00F54E57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC10CD7628C8438C00F54E57 /* Assets.xcassets */; };
 		AC10CD7A28C8438C00F54E57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC10CD7828C8438C00F54E57 /* LaunchScreen.storyboard */; };
 		AC10CD8828C8444D00F54E57 /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC10CD8728C8444D00F54E57 /* ConversationsController.swift */; };
@@ -19,7 +18,6 @@
 		AC10CD6A28C8438A00F54E57 /* FireChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC10CD6D28C8438A00F54E57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC10CD6F28C8438A00F54E57 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AC10CD7128C8438A00F54E57 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC10CD7628C8438C00F54E57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC10CD7928C8438C00F54E57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC10CD7B28C8438C00F54E57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,9 +62,8 @@
 				AC10CD8128C843B900F54E57 /* Utils */,
 				AC10CD6D28C8438A00F54E57 /* AppDelegate.swift */,
 				AC10CD6F28C8438A00F54E57 /* SceneDelegate.swift */,
-				AC10CD7128C8438A00F54E57 /* ViewController.swift */,
-				AC10CD7628C8438C00F54E57 /* Assets.xcassets */,
 				AC10CD7828C8438C00F54E57 /* LaunchScreen.storyboard */,
+				AC10CD7628C8438C00F54E57 /* Assets.xcassets */,
 				AC10CD7B28C8438C00F54E57 /* Info.plist */,
 			);
 			path = FireChat;
@@ -185,7 +182,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC10CD7228C8438A00F54E57 /* ViewController.swift in Sources */,
 				AC10CD6E28C8438A00F54E57 /* AppDelegate.swift in Sources */,
 				AC10CD8828C8444D00F54E57 /* ConversationsController.swift in Sources */,
 				AC10CD7028C8438A00F54E57 /* SceneDelegate.swift in Sources */,
@@ -329,15 +325,17 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FireChat/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Fire Chat";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.brunofelix.FireChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -355,15 +353,17 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FireChat/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Fire Chat";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.brunofelix.FireChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
