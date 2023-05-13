@@ -4,26 +4,14 @@ import UIKit
 private let reuseIdentifier: String = "ConversationCell"
 
 class ConversationsController : UIViewController {
-    
-    // MARK: - Properties
-    
+
     private let tableView = UITableView()
-    
-    // MARK: - Lifecycle
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
     }
-    
-    // MARK: - Selectors
-    
-    @objc func showProfile() {
-        print("show profile")
-    }
-    
-    // MARK: - Helpers
-    
+        
     private func configureUI() {
         view.backgroundColor = .white
         
@@ -65,6 +53,10 @@ class ConversationsController : UIViewController {
         
         view.addSubview(tableView)
         tableView.frame = view.frame
+    }
+    
+    @objc func showProfile() {
+        print("show profile")
     }
 }
 
