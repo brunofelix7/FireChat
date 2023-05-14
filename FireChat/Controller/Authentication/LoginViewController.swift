@@ -24,10 +24,23 @@ class LoginViewController : UIViewController {
     private lazy var loginButton: UIButton = {
         let button = UIButton()
         button.setTitle("Log In", for: .normal)
-        button.layer.cornerRadius = 6
+        button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        button.layer.cornerRadius = 6
         button.backgroundColor = .systemPink
         button.setHeight(height: 50)
+        return button
+    }()
+    
+    private lazy var signUpButton: UIButton = {
+        let button = UIButton(type: .system)
+        let attributedTitle = NSMutableAttributedString(string: "Don't have an account? ",
+                                              attributes: [.font: UIFont.systemFont(ofSize: 16),
+                                                           .foregroundColor: UIColor.white])
+        attributedTitle.append(NSAttributedString(string: "Sign Up", attributes: [.font: UIFont.boldSystemFont(ofSize: 16),
+                                                                        .foregroundColor: UIColor.white]))
+        button.setAttributedTitle(attributedTitle, for: .normal)
+        button.addTarget(self, action: #selector(showSignUp), for: .touchUpInside)
         return button
     }()
     
@@ -58,11 +71,19 @@ class LoginViewController : UIViewController {
         configureUI()
     }
     
+    // MARK: Selectors
+    @objc private func showSignUp() {
+        let controller = SignUpViewController()
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    // MARK: UI Configuration
     private func configureUI() {
         configureNavBar()
         configureGradientLayer()
-        configureLogoView()
-        configureStackContainerView()
+        configureLogo()
+        configureStackContainer()
+        configureSignUpButton()
     }
     
     private func configureNavBar() {
@@ -78,14 +99,20 @@ class LoginViewController : UIViewController {
         gradient.frame = view.frame
     }
     
-    private func configureLogoView() {
+    private func configureLogo() {
         view.addSubview(logoImage)
         logoImage.centerX(inView: view)
         logoImage.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 32)
         logoImage.setDimensions(height: 120, width: 120)
     }
     
-    private func configureStackContainerView() {
+    private func configureStackContainer() {
         view.addSubview(stackContainerView)
+    }
+    
+    private func configureSignUpButton() {
+        view.addSubview(signUpButton)
+        signUpButton.centerX(inView: view)
+        signUpButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor)
     }
 }
