@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class RegistrationController : UIViewController {
+class SignUpViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
