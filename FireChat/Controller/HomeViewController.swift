@@ -3,7 +3,7 @@ import UIKit
 
 private let reuseIdentifier: String = "ConversationCell"
 
-class ConversationsController : UIViewController {
+class HomeViewController : UIViewController {
 
     private let tableView = UITableView()
         
@@ -60,7 +60,7 @@ class ConversationsController : UIViewController {
     }
 }
 
-extension ConversationsController: UITableViewDataSource {
+extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
@@ -76,7 +76,7 @@ extension ConversationsController: UITableViewDataSource {
     
 }
 
-extension ConversationsController: UITableViewDelegate {
+extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)

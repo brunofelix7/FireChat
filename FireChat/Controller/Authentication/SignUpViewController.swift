@@ -32,10 +32,10 @@ class SignUpViewController : UIViewController {
     private lazy var usernameTextField = TextFieldView("Username")
     private lazy var passwordTextField = TextFieldView("Password", isPassword: true)
     
-    private lazy var emailContainerView = InputContainerView(iconEmail, emailTextField)
-    private lazy var nameContainerView = InputContainerView(iconUser, nameTextField)
-    private lazy var usernameContainerView = InputContainerView(iconUser, usernameTextField)
-    private lazy var passwordContainerView = InputContainerView(iconLock, passwordTextField)
+    private lazy var emailContainerView = TextFieldContainerView(iconEmail, emailTextField)
+    private lazy var nameContainerView = TextFieldContainerView(iconUser, nameTextField)
+    private lazy var usernameContainerView = TextFieldContainerView(iconUser, usernameTextField)
+    private lazy var passwordContainerView = TextFieldContainerView(iconLock, passwordTextField)
     
     private lazy var signUpButton: UIButton = {
         let button = UIButton()

@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class InputContainerView : UIView {
+class TextFieldContainerView : UIView {
     
     init(_ icon: UIImage?, _ textField: UITextField) {
         super.init(frame: .zero)

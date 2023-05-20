@@ -4,6 +4,7 @@ import UIKit
 class LoginViewController : UIViewController {
     
     // MARK: Properties
+    private var viewModel = LoginViewModel()
     private let iconBubble = UIImage(systemName: "bubble.right")
     private let iconEmail = UIImage(imageLiteralResourceName: "icon_email")
     private let iconLock = UIImage(imageLiteralResourceName: "icon_lock")
@@ -12,8 +13,9 @@ class LoginViewController : UIViewController {
     // MARK: Views
     private lazy var emailTextField = TextFieldView("E-mail")
     private lazy var passwordTextField = TextFieldView("Password", isPassword: true)
-    private lazy var emailContainerView = InputContainerView(iconEmail, emailTextField)
-    private lazy var passwordContainerView = InputContainerView(iconLock, passwordTextField)
+    
+    private lazy var emailContainerView = TextFieldContainerView(iconEmail, emailTextField)
+    private lazy var passwordContainerView = TextFieldContainerView(iconLock, passwordTextField)
     
     private lazy var logoImage: UIImageView = {
         let imageView = UIImageView()
@@ -27,8 +29,10 @@ class LoginViewController : UIViewController {
         button.setTitle("Log In", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-        button.layer.cornerRadius = 6
         button.backgroundColor = .lightText
+        button.isEnabled = false
+        button.layer.cornerRadius = 6
+        button.addTarget(self, action: #selector(loginUser), for: .touchUpInside)
         button.setHeight(height: 50)
         return button
     }()
@@ -36,12 +40,15 @@ class LoginViewController : UIViewController {
     private lazy var signUpButton: UIButton = {
         let button = UIButton(type: .system)
         let attributedTitle = NSMutableAttributedString(string: "Don't have an account? ",
-                                              attributes: [.font: UIFont.systemFont(ofSize: 16),
-                                                           .foregroundColor: UIColor.white])
-        attributedTitle.append(NSAttributedString(string: "Sign Up", attributes: [.font: UIFont.boldSystemFont(ofSize: 16),
-                                                                        .foregroundColor: UIColor.white]))
+                                                        attributes: [
+                                                            .font: UIFont.systemFont(ofSize: 16),
+                                                            .foregroundColor: UIColor.white])
+        attributedTitle.append(NSAttributedString(string: "Sign Up",
+                                                  attributes: [
+                                                    .font: UIFont.boldSystemFont(ofSize: 16),
+                                                    .foregroundColor: UIColor.white]))
         button.setAttributedTitle(attributedTitle, for: .normal)
-        button.addTarget(self, action: #selector(showSignUp), for: .touchUpInside)
+        button.addTarget(self, action: #selector(showSignUpView), for: .touchUpInside)
         return button
     }()
     
@@ -77,9 +84,34 @@ class LoginViewController : UIViewController {
     
     
     // MARK: Selectors
-    @objc private func showSignUp() {
+    @objc private func loginUser() {
+        print("DEBUG: Login user here...")
+    }
+    
+    @objc private func showSignUpView() {
         let controller = SignUpViewController()
         navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @objc private func textFieldListener(sender: UITextField) {
+        if sender == emailTextField {
+            viewModel.email = sender.text
+        } else {
+            viewModel.password = sender.text
+        }
+        validadeForm()
+    }
+    
+    
+    // MARK: Helpers
+    private func validadeForm() {
+        if viewModel.formIsValid {
+            loginButton.isEnabled = true
+            loginButton.backgroundColor = .purple
+        } else {
+            loginButton.isEnabled = false
+            loginButton.backgroundColor = .lightText
+        }
     }
     
     
@@ -90,6 +122,7 @@ class LoginViewController : UIViewController {
         configureLogo()
         configureStackContainer()
         configureSignUpButton()
+        configureTextFieldListener()
     }
     
     private func configureNavBar() {
@@ -111,6 +144,11 @@ class LoginViewController : UIViewController {
     private func configureSignUpButton() {
         view.addSubview(signUpButton)
         signUpButton.centerX(inView: view)
-        signUpButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor)
+        signUpButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: 16)
+    }
+    
+    private func configureTextFieldListener() {
+        emailTextField.addTarget(self, action: #selector(textFieldListener), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textFieldListener), for: .editingChanged)
     }
 }

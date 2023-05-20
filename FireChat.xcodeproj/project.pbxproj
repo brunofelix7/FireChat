@@ -7,30 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC0B7A272A1935C9009DC6BC /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B7A262A1935C9009DC6BC /* LoginViewModel.swift */; };
 		AC10CD6E28C8438A00F54E57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC10CD6D28C8438A00F54E57 /* AppDelegate.swift */; };
 		AC10CD7028C8438A00F54E57 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC10CD6F28C8438A00F54E57 /* SceneDelegate.swift */; };
 		AC10CD7728C8438C00F54E57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC10CD7628C8438C00F54E57 /* Assets.xcassets */; };
 		AC10CD7A28C8438C00F54E57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC10CD7828C8438C00F54E57 /* LaunchScreen.storyboard */; };
-		AC10CD8828C8444D00F54E57 /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC10CD8728C8444D00F54E57 /* ConversationsController.swift */; };
+		AC10CD8828C8444D00F54E57 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC10CD8728C8444D00F54E57 /* HomeViewController.swift */; };
 		AC9E15902A10057A00A4D16E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E158F2A10057A00A4D16E /* LoginViewController.swift */; };
 		AC9E15922A10058B00A4D16E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E15912A10058B00A4D16E /* SignUpViewController.swift */; };
 		AC9E15942A1041D500A4D16E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E15932A1041D500A4D16E /* Extensions.swift */; };
-		AC9E15962A1139B700A4D16E /* InputContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E15952A1139B700A4D16E /* InputContainerView.swift */; };
+		AC9E15962A1139B700A4D16E /* TextFieldContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E15952A1139B700A4D16E /* TextFieldContainerView.swift */; };
 		AC9E15982A1139D100A4D16E /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E15972A1139D100A4D16E /* TextFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC0B7A262A1935C9009DC6BC /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		AC10CD6A28C8438A00F54E57 /* FireChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC10CD6D28C8438A00F54E57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC10CD6F28C8438A00F54E57 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AC10CD7628C8438C00F54E57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC10CD7928C8438C00F54E57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC10CD7B28C8438C00F54E57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AC10CD8728C8444D00F54E57 /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
+		AC10CD8728C8444D00F54E57 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AC9E158F2A10057A00A4D16E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AC9E15912A10058B00A4D16E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		AC9E15932A1041D500A4D16E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		AC9E15952A1139B700A4D16E /* InputContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputContainerView.swift; sourceTree = "<group>"; };
+		AC9E15952A1139B700A4D16E /* TextFieldContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldContainerView.swift; sourceTree = "<group>"; };
 		AC9E15972A1139D100A4D16E /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				AC9E158E2A10053100A4D16E /* Authentication */,
-				AC10CD8728C8444D00F54E57 /* ConversationsController.swift */,
+				AC10CD8728C8444D00F54E57 /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -106,6 +108,7 @@
 		AC10CD8428C843EA00F54E57 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				AC0B7A262A1935C9009DC6BC /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -113,7 +116,7 @@
 		AC10CD8528C843EC00F54E57 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AC9E15952A1139B700A4D16E /* InputContainerView.swift */,
+				AC9E15952A1139B700A4D16E /* TextFieldContainerView.swift */,
 				AC9E15972A1139D100A4D16E /* TextFieldView.swift */,
 			);
 			path = View;
@@ -207,12 +210,13 @@
 			files = (
 				AC10CD6E28C8438A00F54E57 /* AppDelegate.swift in Sources */,
 				AC9E15942A1041D500A4D16E /* Extensions.swift in Sources */,
-				AC9E15962A1139B700A4D16E /* InputContainerView.swift in Sources */,
+				AC9E15962A1139B700A4D16E /* TextFieldContainerView.swift in Sources */,
 				AC9E15982A1139D100A4D16E /* TextFieldView.swift in Sources */,
 				AC9E15902A10057A00A4D16E /* LoginViewController.swift in Sources */,
-				AC10CD8828C8444D00F54E57 /* ConversationsController.swift in Sources */,
+				AC10CD8828C8444D00F54E57 /* HomeViewController.swift in Sources */,
 				AC9E15922A10058B00A4D16E /* SignUpViewController.swift in Sources */,
 				AC10CD7028C8438A00F54E57 /* SceneDelegate.swift in Sources */,
+				AC0B7A272A1935C9009DC6BC /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +355,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 76US74G929;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FireChat/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Fire Chat";
@@ -379,6 +384,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 76US74G929;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FireChat/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Fire Chat";
