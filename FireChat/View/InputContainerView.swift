@@ -3,7 +3,7 @@ import UIKit
 
 class InputContainerView : UIView {
     
-    init(icon: UIImage?, textField: UITextField) {
+    init(_ icon: UIImage?, _ textField: UITextField) {
         super.init(frame: .zero)
         
         setHeight(height: 50)

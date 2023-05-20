@@ -3,7 +3,7 @@ import UIKit
 
 class TextFieldView : UITextField {
     
-    init(placeholder: String, isPassword: Bool = false) {
+    init(_ placeholder: String, isPassword: Bool = false) {
         super.init(frame: .zero)
         
         font = UIFont.systemFont(ofSize: 14)

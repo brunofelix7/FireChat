@@ -8,11 +8,12 @@ class LoginViewController : UIViewController {
     private let iconEmail = UIImage(imageLiteralResourceName: "icon_email")
     private let iconLock = UIImage(imageLiteralResourceName: "icon_lock")
     
+    
     // MARK: Views
-    private lazy var emailContainerView = InputContainerView(icon: iconEmail, textField: emailTextField)
-    private lazy var passwordContainerView = InputContainerView(icon: iconLock, textField: passwordTextField)
-    private lazy var emailTextField = TextFieldView(placeholder: "E-mail")
-    private lazy var passwordTextField = TextFieldView(placeholder: "Password", isPassword: true)
+    private lazy var emailTextField = TextFieldView("E-mail")
+    private lazy var passwordTextField = TextFieldView("Password", isPassword: true)
+    private lazy var emailContainerView = InputContainerView(iconEmail, emailTextField)
+    private lazy var passwordContainerView = InputContainerView(iconLock, passwordTextField)
     
     private lazy var logoImage: UIImageView = {
         let imageView = UIImageView()
@@ -27,7 +28,7 @@ class LoginViewController : UIViewController {
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         button.layer.cornerRadius = 6
-        button.backgroundColor = .systemPink
+        button.backgroundColor = .lightText
         button.setHeight(height: 50)
         return button
     }()
@@ -48,7 +49,8 @@ class LoginViewController : UIViewController {
         let stack = UIStackView(arrangedSubviews: [
             emailContainerView,
             passwordContainerView,
-            loginButton])
+            loginButton
+        ])
         
         stack.axis = .vertical
         stack.spacing = 16
@@ -61,9 +63,11 @@ class LoginViewController : UIViewController {
             right: view.rightAnchor,
             paddingTop: 32,
             paddingLeft: 32,
-            paddingRight: 32)
+            paddingRight: 32
+        )
         return stack
     }()
+    
     
     // MARK: Lifecycle
     override func viewDidLoad() {
@@ -71,11 +75,13 @@ class LoginViewController : UIViewController {
         configureUI()
     }
     
+    
     // MARK: Selectors
     @objc private func showSignUp() {
         let controller = SignUpViewController()
         navigationController?.pushViewController(controller, animated: true)
     }
+    
     
     // MARK: UI Configuration
     private func configureUI() {
@@ -89,14 +95,6 @@ class LoginViewController : UIViewController {
     private func configureNavBar() {
         navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.barStyle = .black
-    }
-    
-    private func configureGradientLayer() {
-        let gradient = CAGradientLayer()
-        gradient.colors = [UIColor.systemPurple.cgColor, UIColor.systemPink.cgColor]
-        gradient.locations = [0, 1]
-        view.layer.addSublayer(gradient)
-        gradient.frame = view.frame
     }
     
     private func configureLogo() {
