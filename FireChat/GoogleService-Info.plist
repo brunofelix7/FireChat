@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>855216451361-f79pltr4ttv4q7pbt3n7vhlg4vfd717u.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.855216451361-f79pltr4ttv4q7pbt3n7vhlg4vfd717u</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBN_ee2puwBck4Aswols7927CSjvbyVpQE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>855216451361</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>dev.brunofelix.FireChat</string>
+	<key>PROJECT_ID</key>
+	<string>firechat-97136</string>
+	<key>STORAGE_BUCKET</key>
+	<string>firechat-97136.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:855216451361:ios:f31e4615ab2599b00e9860</string>
+</dict>
+</plist>
