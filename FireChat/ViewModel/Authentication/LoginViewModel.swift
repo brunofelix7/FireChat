@@ -1,6 +1,6 @@
 import Foundation
 
-struct LoginViewModel {
+struct LoginViewModel : AuthenticationViewModelProtocol {
     
     var email: String?
     var password: String?

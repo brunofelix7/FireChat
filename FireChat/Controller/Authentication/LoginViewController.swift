@@ -79,7 +79,9 @@ class LoginViewController : UIViewController {
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboard()
         configureUI()
+        configureTextFieldObservers()
     }
     
     
@@ -93,25 +95,13 @@ class LoginViewController : UIViewController {
         navigationController?.pushViewController(controller, animated: true)
     }
     
-    @objc private func textFieldListener(sender: UITextField) {
+    @objc private func textFieldObservers(sender: UITextField) {
         if sender == emailTextField {
             viewModel.email = sender.text
         } else {
             viewModel.password = sender.text
         }
         validadeForm()
-    }
-    
-    
-    // MARK: Helpers
-    private func validadeForm() {
-        if viewModel.formIsValid {
-            loginButton.isEnabled = true
-            loginButton.backgroundColor = .purple
-        } else {
-            loginButton.isEnabled = false
-            loginButton.backgroundColor = .lightText
-        }
     }
     
     
@@ -122,7 +112,6 @@ class LoginViewController : UIViewController {
         configureLogo()
         configureStackContainer()
         configureSignUpButton()
-        configureTextFieldListener()
     }
     
     private func configureNavBar() {
@@ -147,8 +136,21 @@ class LoginViewController : UIViewController {
         signUpButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: 16)
     }
     
-    private func configureTextFieldListener() {
-        emailTextField.addTarget(self, action: #selector(textFieldListener), for: .editingChanged)
-        passwordTextField.addTarget(self, action: #selector(textFieldListener), for: .editingChanged)
+    private func configureTextFieldObservers() {
+        emailTextField.addTarget(self, action: #selector(textFieldObservers), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textFieldObservers), for: .editingChanged)
+    }
+}
+
+extension LoginViewController : AuthenticationViewControllerProtocol {
+    
+    func validadeForm() {
+        if viewModel.formIsValid {
+            loginButton.isEnabled = true
+            loginButton.backgroundColor = .systemPurple
+        } else {
+            loginButton.isEnabled = false
+            loginButton.backgroundColor = .lightText
+        }
     }
 }

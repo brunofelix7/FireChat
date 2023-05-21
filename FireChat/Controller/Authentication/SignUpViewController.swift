@@ -4,6 +4,7 @@ import UIKit
 class SignUpViewController : UIViewController {
     
     // MARK: Properties
+    private var viewModel = SignUpViewModel()
     private let iconBack = UIImage(imageLiteralResourceName: "icon_back")
     private let imagePhoto = UIImage(imageLiteralResourceName: "icon_camera")
     private let iconEmail = UIImage(imageLiteralResourceName: "icon_email")
@@ -15,7 +16,7 @@ class SignUpViewController : UIViewController {
     private lazy var iconBackButton: UIButton = {
         let button = UIButton()
         button.setImage(iconBack, for: .normal)
-        button.addTarget(self, action: #selector(backToSignIn), for: .touchUpInside)
+        button.addTarget(self, action: #selector(backToSignInView), for: .touchUpInside)
         return button
     }()
     
@@ -23,6 +24,8 @@ class SignUpViewController : UIViewController {
         let button = UIButton()
         button.setImage(imagePhoto, for: .normal)
         button.tintColor = .white
+        button.imageView?.clipsToBounds = true
+        button.clipsToBounds = true
         button.addTarget(self, action: #selector(uploadPhoto), for: .touchUpInside)
         return button
     }()
@@ -44,6 +47,8 @@ class SignUpViewController : UIViewController {
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         button.layer.cornerRadius = 6
         button.backgroundColor = .lightText
+        button.isEnabled = false
+        button.addTarget(self, action: #selector(signUpUser), for: .touchUpInside)
         button.setHeight(height: 50)
         return button
     }()
@@ -78,19 +83,40 @@ class SignUpViewController : UIViewController {
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboard()
         configureUI()
+        configureTextFieldObservers()
     }
     
     
     // MARK: Selectors
-    @objc private func backToSignIn() {
+    @objc private func backToSignInView() {
         navigationController?.popViewController(animated: true)
     }
     
     @objc private func uploadPhoto() {
-        print("Upload photo")
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        present(imagePicker, animated: true)
     }
     
+    @objc private func signUpUser() {
+        print("DEBUG: Sign up user here...")
+    }
+    
+    @objc private func textFieldObservers(sender: UITextField) {
+        if sender == emailTextField {
+            viewModel.email = sender.text
+        } else if sender == nameTextField {
+            viewModel.name = nameTextField.text
+        } else if sender == usernameTextField {
+            viewModel.username = usernameTextField.text
+        } else {
+            viewModel.password = sender.text
+        }
+        validadeForm()
+    }
+
     
     // MARK: UI Configuration
     private func configureUI() {
@@ -126,4 +152,40 @@ class SignUpViewController : UIViewController {
         view.addSubview(stackContainerView)
     }
     
+    private func configureTextFieldObservers() {
+        emailTextField.addTarget(self, action: #selector(textFieldObservers), for: .editingChanged)
+        nameTextField.addTarget(self, action: #selector(textFieldObservers), for: .editingChanged)
+        usernameTextField.addTarget(self, action: #selector(textFieldObservers), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textFieldObservers), for: .editingChanged)
+    }
+    
+}
+
+extension SignUpViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.originalImage] as? UIImage
+        
+        photoImageButton.setImage(image?.withRenderingMode(.alwaysOriginal), for: .normal)
+        photoImageButton.layer.borderColor = UIColor(white: 1, alpha: 0.7).cgColor
+        photoImageButton.layer.borderWidth = 3.0
+        photoImageButton.layer.cornerRadius = photoImageButton.bounds.height / 2.0
+        photoImageButton.imageView?.contentMode = .scaleAspectFit
+        
+        dismiss(animated: true)
+    }
+}
+
+extension SignUpViewController : AuthenticationViewControllerProtocol {
+    
+    func validadeForm() {
+        if viewModel.formIsValid {
+            signUpButton.isEnabled = true
+            signUpButton.backgroundColor = .systemPurple
+        } else {
+            signUpButton.isEnabled = false
+            signUpButton.backgroundColor = .lightText
+        }
+    }
 }
