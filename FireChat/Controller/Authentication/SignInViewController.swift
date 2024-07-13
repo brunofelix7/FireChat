@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class LoginViewController : UIViewController {
+class SignInViewController : UIViewController {
     
     // MARK: Properties
     private var viewModel = LoginViewModel()
@@ -142,7 +142,7 @@ class LoginViewController : UIViewController {
     }
 }
 
-extension LoginViewController : AuthenticationViewControllerProtocol {
+extension SignInViewController : AuthenticationViewControllerProtocol {
     
     func validadeForm() {
         if viewModel.formIsValid {

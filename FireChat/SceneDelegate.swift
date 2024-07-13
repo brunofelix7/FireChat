@@ -4,9 +4,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+    func scene(
+        _ scene: UIScene,
+        willConnectTo session: UISceneSession,
+        options connectionOptions: UIScene.ConnectionOptions
+    ) {
         guard let scene = (scene as? UIWindowScene) else { return }
-        let nav = UINavigationController(rootViewController: LoginViewController())
+        let nav = UINavigationController(rootViewController: SignInViewController())
 
         window = UIWindow(windowScene: scene)
         window?.rootViewController = nav

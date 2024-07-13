@@ -17,7 +17,7 @@
 		AC10CD7A28C8438C00F54E57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC10CD7828C8438C00F54E57 /* LaunchScreen.storyboard */; };
 		AC10CD8828C8444D00F54E57 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC10CD8728C8444D00F54E57 /* HomeViewController.swift */; };
 		AC94FC802A1AC00300F84384 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC94FC7F2A1AC00300F84384 /* GoogleService-Info.plist */; };
-		AC9E15902A10057A00A4D16E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E158F2A10057A00A4D16E /* LoginViewController.swift */; };
+		AC9E15902A10057A00A4D16E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E158F2A10057A00A4D16E /* SignInViewController.swift */; };
 		AC9E15922A10058B00A4D16E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E15912A10058B00A4D16E /* SignUpViewController.swift */; };
 		AC9E15942A1041D500A4D16E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E15932A1041D500A4D16E /* Extensions.swift */; };
 		AC9E15962A1139B700A4D16E /* TextFieldContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E15952A1139B700A4D16E /* TextFieldContainerView.swift */; };
@@ -38,7 +38,7 @@
 		AC10CD7B28C8438C00F54E57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC10CD8728C8444D00F54E57 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AC94FC7F2A1AC00300F84384 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		AC9E158F2A10057A00A4D16E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AC9E158F2A10057A00A4D16E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		AC9E15912A10058B00A4D16E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		AC9E15932A1041D500A4D16E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		AC9E15952A1139B700A4D16E /* TextFieldContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldContainerView.swift; sourceTree = "<group>"; };
@@ -104,12 +104,12 @@
 		AC10CD6C28C8438A00F54E57 /* FireChat */ = {
 			isa = PBXGroup;
 			children = (
-				AC0B7A2D2A1AAFC2009DC6BC /* Protocol */,
+				AC10CD8228C843E200F54E57 /* API */,
 				AC10CD8628C843EF00F54E57 /* Model */,
 				AC10CD8528C843EC00F54E57 /* View */,
 				AC10CD8428C843EA00F54E57 /* ViewModel */,
 				AC10CD8328C843E700F54E57 /* Controller */,
-				AC10CD8228C843E200F54E57 /* API */,
+				AC0B7A2D2A1AAFC2009DC6BC /* Protocol */,
 				AC10CD8128C843B900F54E57 /* Utils */,
 				AC10CD6D28C8438A00F54E57 /* AppDelegate.swift */,
 				AC10CD6F28C8438A00F54E57 /* SceneDelegate.swift */,
@@ -172,7 +172,7 @@
 		AC9E158E2A10053100A4D16E /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				AC9E158F2A10057A00A4D16E /* LoginViewController.swift */,
+				AC9E158F2A10057A00A4D16E /* SignInViewController.swift */,
 				AC9E15912A10058B00A4D16E /* SignUpViewController.swift */,
 			);
 			path = Authentication;
@@ -308,7 +308,7 @@
 				AC0B7A292A195C50009DC6BC /* SignUpViewModel.swift in Sources */,
 				AC9E15962A1139B700A4D16E /* TextFieldContainerView.swift in Sources */,
 				AC9E15982A1139D100A4D16E /* TextFieldView.swift in Sources */,
-				AC9E15902A10057A00A4D16E /* LoginViewController.swift in Sources */,
+				AC9E15902A10057A00A4D16E /* SignInViewController.swift in Sources */,
 				AC10CD8828C8444D00F54E57 /* HomeViewController.swift in Sources */,
 				AC9E15922A10058B00A4D16E /* SignUpViewController.swift in Sources */,
 				AC10CD7028C8438A00F54E57 /* SceneDelegate.swift in Sources */,
@@ -380,7 +380,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -434,7 +434,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -460,7 +460,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -468,9 +468,13 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.brunofelix.FireChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -490,7 +494,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -498,9 +502,13 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.brunofelix.FireChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

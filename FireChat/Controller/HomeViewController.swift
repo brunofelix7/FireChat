@@ -14,18 +14,18 @@ class HomeViewController : UIViewController {
         
     private func configureUI() {
         view.backgroundColor = .white
-        
         configureNavBar()
         configureTableView()
     }
     
     private func configureNavBar() {
-        let imageIcon = UIImage(systemName: "person.circle.fill")
+        let profileIcon = UIImage(systemName: "person.circle.fill")
+        let addIcon = UIImage(systemName: "plus")
         let appearance = UINavigationBarAppearance()
         
         appearance.configureWithOpaqueBackground()
         appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        appearance.backgroundColor = .black
+        appearance.backgroundColor = .purple
         
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.compactAppearance = appearance
@@ -37,10 +37,15 @@ class HomeViewController : UIViewController {
 
         navigationItem.title = "Messages"
         navigationItem.leftBarButtonItem = UIBarButtonItem(
-            image: imageIcon,
+            image: profileIcon,
             style: .plain,
             target: self,
             action: #selector(showProfile))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: addIcon,
+            style: .plain,
+            target: self,
+            action: #selector(addContact))
     }
     
     private func configureTableView() {
@@ -56,7 +61,11 @@ class HomeViewController : UIViewController {
     }
     
     @objc func showProfile() {
-        print("show profile")
+        print("show profile action")
+    }
+    
+    @objc func addContact() {
+        print("Add contact action")
     }
 }
 
