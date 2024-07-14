@@ -4,6 +4,7 @@ import UIKit
 class SignUpViewController : UIViewController {
     
     // MARK: Properties
+    
     private var viewModel = SignUpViewModel()
     private let iconBack = UIImage(imageLiteralResourceName: "icon_back")
     private let imagePhoto = UIImage(imageLiteralResourceName: "icon_camera")
@@ -11,8 +12,8 @@ class SignUpViewController : UIViewController {
     private let iconLock = UIImage(imageLiteralResourceName: "icon_lock")
     private let iconUser = UIImage(imageLiteralResourceName: "icon_user")
     
-    
     // MARK: Views
+    
     private lazy var iconBackButton: UIButton = {
         let button = UIButton()
         button.setImage(iconBack, for: .normal)
@@ -79,8 +80,8 @@ class SignUpViewController : UIViewController {
         return stack
     }()
     
-    
     // MARK: Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboard()
@@ -88,37 +89,8 @@ class SignUpViewController : UIViewController {
         configureTextFieldObservers()
     }
     
+    // MARK: UI Configurations
     
-    // MARK: Selectors
-    @objc private func backToSignInView() {
-        navigationController?.popViewController(animated: true)
-    }
-    
-    @objc private func uploadPhoto() {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        present(imagePicker, animated: true)
-    }
-    
-    @objc private func signUpUser() {
-        print("DEBUG: Sign up user here...")
-    }
-    
-    @objc private func textFieldObservers(sender: UITextField) {
-        if sender == emailTextField {
-            viewModel.email = sender.text
-        } else if sender == nameTextField {
-            viewModel.name = nameTextField.text
-        } else if sender == usernameTextField {
-            viewModel.username = usernameTextField.text
-        } else {
-            viewModel.password = sender.text
-        }
-        validadeForm()
-    }
-
-    
-    // MARK: UI Configuration
     private func configureUI() {
         configureNavBar()
         configureGradientLayer()
@@ -159,7 +131,37 @@ class SignUpViewController : UIViewController {
         passwordTextField.addTarget(self, action: #selector(textFieldObservers), for: .editingChanged)
     }
     
+    // MARK: Selectors
+    
+    @objc private func backToSignInView() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @objc private func uploadPhoto() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        present(imagePicker, animated: true)
+    }
+    
+    @objc private func signUpUser() {
+        print("DEBUG: Sign up user here...")
+    }
+    
+    @objc private func textFieldObservers(sender: UITextField) {
+        if sender == emailTextField {
+            viewModel.email = sender.text
+        } else if sender == nameTextField {
+            viewModel.name = nameTextField.text
+        } else if sender == usernameTextField {
+            viewModel.username = usernameTextField.text
+        } else {
+            viewModel.password = sender.text
+        }
+        validadeForm()
+    }
 }
+
+// MARK: Extensions
 
 extension SignUpViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -182,10 +184,16 @@ extension SignUpViewController : AuthenticationViewControllerProtocol {
     func validadeForm() {
         if viewModel.formIsValid {
             signUpButton.isEnabled = true
-            signUpButton.backgroundColor = .systemPurple
+            signUpButton.backgroundColor = .white
+            signUpButton.setTitleColor(.purple, for: .normal)
         } else {
             signUpButton.isEnabled = false
             signUpButton.backgroundColor = .lightText
+            signUpButton.setTitleColor(.white, for: .normal)
         }
     }
+}
+
+#Preview {
+    return SignUpViewController()
 }

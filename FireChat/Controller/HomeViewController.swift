@@ -5,13 +5,22 @@ private let reuseIdentifier: String = "ConversationCell"
 
 class HomeViewController : UIViewController {
 
+    // MARK: Properties
+    
     private let tableView = UITableView()
+    private let profileIcon = UIImage(systemName: "person.circle.fill")
+    private let addIcon = UIImage(systemName: "plus")
+    private let appearance = UINavigationBarAppearance()
         
+    // MARK: Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
     }
         
+    // MARK: UI Configurations
+    
     private func configureUI() {
         view.backgroundColor = .white
         configureNavBar()
@@ -19,10 +28,6 @@ class HomeViewController : UIViewController {
     }
     
     private func configureNavBar() {
-        let profileIcon = UIImage(systemName: "person.circle.fill")
-        let addIcon = UIImage(systemName: "plus")
-        let appearance = UINavigationBarAppearance()
-        
         appearance.configureWithOpaqueBackground()
         appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         appearance.backgroundColor = .purple
@@ -60,19 +65,23 @@ class HomeViewController : UIViewController {
         tableView.frame = view.frame
     }
     
+    // MARK: Selectors
+    
     @objc func showProfile() {
-        print("show profile action")
+        print("DEBUG: Show profile...")
     }
     
     @objc func addContact() {
-        print("Add contact action")
+        print("DEBUG: Add contact...")
     }
 }
 
-extension HomeViewController: UITableViewDataSource {
+// MARK: Extensions
+
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -83,12 +92,12 @@ extension HomeViewController: UITableViewDataSource {
         return cell
     }
     
-}
-
-extension HomeViewController: UITableViewDelegate {
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         print(indexPath.row)
     }
+}
+
+#Preview {
+    return HomeViewController()
 }

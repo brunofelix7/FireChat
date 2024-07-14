@@ -41,3 +41,23 @@ class TextFieldContainerView : UIView {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+#Preview {
+    let viewController = UIViewController()
+    let view = viewController.view ?? UIView()
+    let icon = UIImage(resource: .iconLock)
+    let textField = TextFieldView("Password", isPassword: true)
+    let container = TextFieldContainerView(icon, textField)
+    
+    viewController.configureGradientLayer()
+    viewController.view.addSubview(container)
+    
+    container.centerY(inView: view)
+    container.anchor(
+        left: view.leftAnchor,
+        right: view.rightAnchor,
+        paddingLeft: 32,
+        paddingRight: 32
+    )
+    return viewController
+}

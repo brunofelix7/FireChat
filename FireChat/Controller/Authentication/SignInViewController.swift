@@ -4,16 +4,16 @@ import UIKit
 class SignInViewController : UIViewController {
     
     // MARK: Properties
+    
     private var viewModel = LoginViewModel()
     private let iconBubble = UIImage(systemName: "bubble.right")
-    private let iconEmail = UIImage(imageLiteralResourceName: "icon_email")
-    private let iconLock = UIImage(imageLiteralResourceName: "icon_lock")
-    
+    private let iconEmail = UIImage(resource: .iconEmail)
+    private let iconLock = UIImage(resource: .iconLock)
     
     // MARK: Views
+    
     private lazy var emailTextField = TextFieldView("E-mail")
     private lazy var passwordTextField = TextFieldView("Password", isPassword: true)
-    
     private lazy var emailContainerView = TextFieldContainerView(iconEmail, emailTextField)
     private lazy var passwordContainerView = TextFieldContainerView(iconLock, passwordTextField)
     
@@ -77,6 +77,7 @@ class SignInViewController : UIViewController {
     
     
     // MARK: Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboard()
@@ -84,28 +85,8 @@ class SignInViewController : UIViewController {
         configureTextFieldObservers()
     }
     
+    // MARK: UI Configurations
     
-    // MARK: Selectors
-    @objc private func loginUser() {
-        print("DEBUG: Login user here...")
-    }
-    
-    @objc private func showSignUpView() {
-        let controller = SignUpViewController()
-        navigationController?.pushViewController(controller, animated: true)
-    }
-    
-    @objc private func textFieldObservers(sender: UITextField) {
-        if sender == emailTextField {
-            viewModel.email = sender.text
-        } else {
-            viewModel.password = sender.text
-        }
-        validadeForm()
-    }
-    
-    
-    // MARK: UI Configuration
     private func configureUI() {
         configureNavBar()
         configureGradientLayer()
@@ -140,17 +121,46 @@ class SignInViewController : UIViewController {
         emailTextField.addTarget(self, action: #selector(textFieldObservers), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(textFieldObservers), for: .editingChanged)
     }
+    
+    // MARK: Selectors
+    
+    @objc private func loginUser() {
+        print("DEBUG: Login user here...")
+    }
+    
+    @objc private func showSignUpView() {
+        let controller = SignUpViewController()
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @objc private func textFieldObservers(sender: UITextField) {
+        if sender == emailTextField {
+            viewModel.email = sender.text
+        } else {
+            viewModel.password = sender.text
+        }
+        validadeForm()
+    }
+    
 }
+
+// MARK: Extensions
 
 extension SignInViewController : AuthenticationViewControllerProtocol {
     
     func validadeForm() {
         if viewModel.formIsValid {
             loginButton.isEnabled = true
-            loginButton.backgroundColor = .systemPurple
+            loginButton.backgroundColor = .white
+            loginButton.setTitleColor(.purple, for: .normal)
         } else {
             loginButton.isEnabled = false
             loginButton.backgroundColor = .lightText
+            loginButton.setTitleColor(.white, for: .normal)
         }
     }
+}
+
+#Preview {
+    return SignInViewController()
 }
