@@ -5,7 +5,6 @@ class TextFieldView : UITextField {
     
     init(_ placeholder: String, isPassword: Bool = false) {
         super.init(frame: .zero)
-        
         font = UIFont.systemFont(ofSize: 14)
         textColor = .white
         borderStyle = .none
@@ -13,7 +12,8 @@ class TextFieldView : UITextField {
         isSecureTextEntry = isPassword
         attributedPlaceholder = NSAttributedString(
             string: placeholder,
-            attributes: [.foregroundColor : UIColor.white])
+            attributes: [.foregroundColor : UIColor.white]
+        )
     }
     
     required init?(coder: NSCoder) {

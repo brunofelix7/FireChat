@@ -5,7 +5,7 @@ class SignInViewController : UIViewController {
     
     // MARK: Properties
     
-    private var viewModel = LoginViewModel()
+    private var viewModel = SignInViewModel()
     private let iconBubble = UIImage(systemName: "bubble.right")
     private let iconEmail = UIImage(resource: .iconEmail)
     private let iconLock = UIImage(resource: .iconLock)
@@ -126,6 +126,8 @@ class SignInViewController : UIViewController {
     
     @objc private func loginUser() {
         print("DEBUG: Login user here...")
+        print("DEBUG: email: \(emailTextField.text ?? "")")
+        print("DEBUG: password: \(passwordTextField.text ?? "")")
     }
     
     @objc private func showSignUpView() {

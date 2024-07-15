@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3E9633E94BBC80BFC125EF8C /* Pods_FireChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 082E3209B82892D8CB300B39 /* Pods_FireChat.framework */; };
-		AC0B7A272A1935C9009DC6BC /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B7A262A1935C9009DC6BC /* LoginViewModel.swift */; };
+		AC0B7A272A1935C9009DC6BC /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B7A262A1935C9009DC6BC /* SignInViewModel.swift */; };
 		AC0B7A292A195C50009DC6BC /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B7A282A195C50009DC6BC /* SignUpViewModel.swift */; };
 		AC0B7A2C2A1AACAC009DC6BC /* AuthenticationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B7A2B2A1AACAC009DC6BC /* AuthenticationProtocol.swift */; };
 		AC10CD6E28C8438A00F54E57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC10CD6D28C8438A00F54E57 /* AppDelegate.swift */; };
@@ -27,7 +27,7 @@
 /* Begin PBXFileReference section */
 		082E3209B82892D8CB300B39 /* Pods_FireChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE21369AA6F0630C0B0C17D /* Pods-FireChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireChat.release.xcconfig"; path = "Target Support Files/Pods-FireChat/Pods-FireChat.release.xcconfig"; sourceTree = "<group>"; };
-		AC0B7A262A1935C9009DC6BC /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		AC0B7A262A1935C9009DC6BC /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		AC0B7A282A195C50009DC6BC /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		AC0B7A2B2A1AACAC009DC6BC /* AuthenticationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationProtocol.swift; sourceTree = "<group>"; };
 		AC10CD6A28C8438A00F54E57 /* FireChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,7 +69,7 @@
 		AC0B7A2A2A1AA917009DC6BC /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				AC0B7A262A1935C9009DC6BC /* LoginViewModel.swift */,
+				AC0B7A262A1935C9009DC6BC /* SignInViewModel.swift */,
 				AC0B7A282A195C50009DC6BC /* SignUpViewModel.swift */,
 			);
 			path = Authentication;
@@ -312,7 +312,7 @@
 				AC10CD8828C8444D00F54E57 /* HomeViewController.swift in Sources */,
 				AC9E15922A10058B00A4D16E /* SignUpViewController.swift in Sources */,
 				AC10CD7028C8438A00F54E57 /* SceneDelegate.swift in Sources */,
-				AC0B7A272A1935C9009DC6BC /* LoginViewModel.swift in Sources */,
+				AC0B7A272A1935C9009DC6BC /* SignInViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
