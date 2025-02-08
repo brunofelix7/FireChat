@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class SignInViewController : UIViewController {
+class SignInScreen : UIViewController {
     
     // MARK: Properties
     
@@ -131,7 +131,7 @@ class SignInViewController : UIViewController {
     }
     
     @objc private func showSignUpView() {
-        let controller = SignUpViewController()
+        let controller = SignUpScreen()
         navigationController?.pushViewController(controller, animated: true)
     }
     
@@ -148,7 +148,7 @@ class SignInViewController : UIViewController {
 
 // MARK: Extensions
 
-extension SignInViewController : AuthenticationViewControllerProtocol {
+extension SignInScreen : AuthenticationViewControllerProtocol {
     
     func validadeForm() {
         if viewModel.formIsValid {
@@ -164,5 +164,5 @@ extension SignInViewController : AuthenticationViewControllerProtocol {
 }
 
 #Preview {
-    return SignInViewController()
+    return SignInScreen()
 }

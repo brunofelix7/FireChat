@@ -3,7 +3,7 @@ import UIKit
 
 private let reuseIdentifier: String = "ConversationCell"
 
-class HomeViewController : UIViewController {
+class HomeScreen : UIViewController {
 
     // MARK: Properties
     
@@ -78,7 +78,7 @@ class HomeViewController : UIViewController {
 
 // MARK: Extensions
 
-extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
+extension HomeScreen: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
@@ -99,5 +99,5 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 #Preview {
-    return HomeViewController()
+    return HomeScreen()
 }

@@ -10,7 +10,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         options connectionOptions: UIScene.ConnectionOptions
     ) {
         guard let scene = (scene as? UIWindowScene) else { return }
-        let nav = UINavigationController(rootViewController: SignInViewController())
+        let nav = UINavigationController(rootViewController: SignInScreen())
 
         window = UIWindow(windowScene: scene)
         window?.rootViewController = nav

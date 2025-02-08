@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class SignUpViewController : UIViewController {
+class SignUpScreen : UIViewController {
     
     // MARK: Properties
     
@@ -163,7 +163,7 @@ class SignUpViewController : UIViewController {
 
 // MARK: Extensions
 
-extension SignUpViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension SignUpScreen : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -179,7 +179,7 @@ extension SignUpViewController : UIImagePickerControllerDelegate, UINavigationCo
     }
 }
 
-extension SignUpViewController : AuthenticationViewControllerProtocol {
+extension SignUpScreen : AuthenticationViewControllerProtocol {
     
     func validadeForm() {
         if viewModel.formIsValid {
@@ -195,5 +195,5 @@ extension SignUpViewController : AuthenticationViewControllerProtocol {
 }
 
 #Preview {
-    return SignUpViewController()
+    return SignUpScreen()
 }
