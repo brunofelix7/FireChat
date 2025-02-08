@@ -105,12 +105,11 @@
 			isa = PBXGroup;
 			children = (
 				AC10CD8228C843E200F54E57 /* API */,
-				AC10CD8628C843EF00F54E57 /* Model */,
-				AC10CD8528C843EC00F54E57 /* View */,
-				AC10CD8428C843EA00F54E57 /* ViewModel */,
+				AC87FDDC2D56573E00B79C0D /* Domain */,
 				AC10CD8328C843E700F54E57 /* Controller */,
-				AC0B7A2D2A1AAFC2009DC6BC /* Protocol */,
-				AC10CD8128C843B900F54E57 /* Utils */,
+				AC10CD8428C843EA00F54E57 /* ViewModel */,
+				AC10CD8528C843EC00F54E57 /* View */,
+				AC10CD8128C843B900F54E57 /* Util */,
 				AC10CD6D28C8438A00F54E57 /* AppDelegate.swift */,
 				AC10CD6F28C8438A00F54E57 /* SceneDelegate.swift */,
 				AC10CD7828C8438C00F54E57 /* LaunchScreen.storyboard */,
@@ -121,12 +120,13 @@
 			path = FireChat;
 			sourceTree = "<group>";
 		};
-		AC10CD8128C843B900F54E57 /* Utils */ = {
+		AC10CD8128C843B900F54E57 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				AC0B7A2D2A1AAFC2009DC6BC /* Protocol */,
 				AC9E15932A1041D500A4D16E /* Extensions.swift */,
 			);
-			path = Utils;
+			path = Util;
 			sourceTree = "<group>";
 		};
 		AC10CD8228C843E200F54E57 /* API */ = {
@@ -167,6 +167,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		AC87FDDC2D56573E00B79C0D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				AC10CD8628C843EF00F54E57 /* Model */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		AC9E158E2A10053100A4D16E /* Authentication */ = {
@@ -380,7 +388,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -434,7 +442,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -460,7 +468,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -494,7 +502,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

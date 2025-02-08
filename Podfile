@@ -10,5 +10,4 @@ target 'FireChat' do
 	pod 'FirebaseFirestore'
 	pod 'FirebaseStorage'
 	pod 'SDWebImage'
-	pod 'JGProgressHUD'
 end
