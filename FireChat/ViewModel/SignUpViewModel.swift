@@ -2,15 +2,13 @@ import Foundation
 
 struct SignUpViewModel : AuthenticationViewModelProtocol {
     
-    var email: String?
-    var name: String?
-    var username: String?
-    var password: String?
+    var user: User = User()
     
     var formIsValid: Bool {
-        return email?.isEmpty == false &&
-               name?.isEmpty == false &&
-               username?.isEmpty == false &&
-               password?.isEmpty == false
+        return
+            user.email?.isEmpty == false &&
+            user.name?.isEmpty == false &&
+            user.username?.isEmpty == false &&
+            user.password?.isEmpty == false
     }
 }

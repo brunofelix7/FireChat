@@ -149,13 +149,13 @@ class SignUpScreen : UIViewController {
     
     @objc private func textFieldObservers(sender: UITextField) {
         if sender == emailTextField {
-            viewModel.email = sender.text
+            viewModel.user.email = sender.text
         } else if sender == nameTextField {
-            viewModel.name = nameTextField.text
+            viewModel.user.name = nameTextField.text
         } else if sender == usernameTextField {
-            viewModel.username = usernameTextField.text
+            viewModel.user.username = usernameTextField.text
         } else {
-            viewModel.password = sender.text
+            viewModel.user.password = sender.text
         }
         validadeForm()
     }

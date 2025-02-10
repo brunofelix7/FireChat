@@ -16,6 +16,7 @@
 		AC10CD7728C8438C00F54E57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC10CD7628C8438C00F54E57 /* Assets.xcassets */; };
 		AC10CD7A28C8438C00F54E57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC10CD7828C8438C00F54E57 /* LaunchScreen.storyboard */; };
 		AC10CD8828C8444D00F54E57 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC10CD8728C8444D00F54E57 /* HomeScreen.swift */; };
+		AC87FDDE2D570CF600B79C0D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87FDDD2D570CF600B79C0D /* User.swift */; };
 		AC94FC802A1AC00300F84384 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC94FC7F2A1AC00300F84384 /* GoogleService-Info.plist */; };
 		AC9E15902A10057A00A4D16E /* SignInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E158F2A10057A00A4D16E /* SignInScreen.swift */; };
 		AC9E15922A10058B00A4D16E /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E15912A10058B00A4D16E /* SignUpScreen.swift */; };
@@ -37,6 +38,7 @@
 		AC10CD7928C8438C00F54E57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC10CD7B28C8438C00F54E57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC10CD8728C8444D00F54E57 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		AC87FDDD2D570CF600B79C0D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = FireChat/Domain/User.swift; sourceTree = SOURCE_ROOT; };
 		AC94FC7F2A1AC00300F84384 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AC9E158F2A10057A00A4D16E /* SignInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreen.swift; sourceTree = "<group>"; };
 		AC9E15912A10058B00A4D16E /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 		AC10CD8628C843EF00F54E57 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AC87FDDD2D570CF600B79C0D /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				AC9E15982A1139D100A4D16E /* TextFieldView.swift in Sources */,
 				AC9E15902A10057A00A4D16E /* SignInScreen.swift in Sources */,
 				AC10CD8828C8444D00F54E57 /* HomeScreen.swift in Sources */,
+				AC87FDDE2D570CF600B79C0D /* User.swift in Sources */,
 				AC9E15922A10058B00A4D16E /* SignUpScreen.swift in Sources */,
 				AC10CD7028C8438A00F54E57 /* SceneDelegate.swift in Sources */,
 				AC0B7A272A1935C9009DC6BC /* SignInViewModel.swift in Sources */,

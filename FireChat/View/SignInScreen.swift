@@ -137,9 +137,9 @@ class SignInScreen : UIViewController {
     
     @objc private func textFieldObservers(sender: UITextField) {
         if sender == emailTextField {
-            viewModel.email = sender.text
+            viewModel.user.email = sender.text
         } else {
-            viewModel.password = sender.text
+            viewModel.user.password = sender.text
         }
         validadeForm()
     }
