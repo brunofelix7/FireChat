@@ -2,18 +2,14 @@ import Foundation
 import UIKit
 
 class SignUpScreen : UIViewController {
-    
-    // MARK: Properties
-    
+        
     private var viewModel = SignUpViewModel()
     private let iconBack = UIImage(imageLiteralResourceName: "icon_back")
     private let imagePhoto = UIImage(imageLiteralResourceName: "icon_camera")
     private let iconEmail = UIImage(imageLiteralResourceName: "icon_email")
     private let iconLock = UIImage(imageLiteralResourceName: "icon_lock")
     private let iconUser = UIImage(imageLiteralResourceName: "icon_user")
-    
-    // MARK: Views
-    
+        
     private lazy var iconBackButton: UIButton = {
         let button = UIButton()
         button.setImage(iconBack, for: .normal)
@@ -79,18 +75,14 @@ class SignUpScreen : UIViewController {
         
         return stack
     }()
-    
-    // MARK: Lifecycle
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboard()
         configureUI()
         configureTextFieldObservers()
     }
-    
-    // MARK: UI Configurations
-    
+        
     private func configureUI() {
         configureNavBar()
         configureGradientLayer()
@@ -130,9 +122,7 @@ class SignUpScreen : UIViewController {
         usernameTextField.addTarget(self, action: #selector(textFieldObservers), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(textFieldObservers), for: .editingChanged)
     }
-    
-    // MARK: Selectors
-    
+        
     @objc private func backToSignInView() {
         navigationController?.popViewController(animated: true)
     }
@@ -161,8 +151,6 @@ class SignUpScreen : UIViewController {
     }
 }
 
-// MARK: Extensions
-
 extension SignUpScreen : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController,
@@ -179,7 +167,7 @@ extension SignUpScreen : UIImagePickerControllerDelegate, UINavigationController
     }
 }
 
-extension SignUpScreen : AuthenticationViewControllerProtocol {
+extension SignUpScreen : AuthViewControllerProtocol {
     
     func validadeForm() {
         if viewModel.formIsValid {

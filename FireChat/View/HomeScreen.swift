@@ -4,23 +4,17 @@ import UIKit
 private let reuseIdentifier: String = "ConversationCell"
 
 class HomeScreen : UIViewController {
-
-    // MARK: Properties
     
     private let tableView = UITableView()
     private let profileIcon = UIImage(systemName: "person.circle.fill")
     private let addIcon = UIImage(systemName: "plus")
     private let appearance = UINavigationBarAppearance()
-        
-    // MARK: Lifecycle
-    
+            
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
     }
-        
-    // MARK: UI Configurations
-    
+            
     private func configureUI() {
         view.backgroundColor = .white
         configureNavBar()
@@ -64,9 +58,7 @@ class HomeScreen : UIViewController {
         view.addSubview(tableView)
         tableView.frame = view.frame
     }
-    
-    // MARK: Selectors
-    
+        
     @objc func showProfile() {
         print("DEBUG: Show profile...")
     }
@@ -75,8 +67,6 @@ class HomeScreen : UIViewController {
         print("DEBUG: Add contact...")
     }
 }
-
-// MARK: Extensions
 
 extension HomeScreen: UITableViewDataSource, UITableViewDelegate {
     

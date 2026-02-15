@@ -10,7 +10,6 @@
 		3E9633E94BBC80BFC125EF8C /* Pods_FireChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 082E3209B82892D8CB300B39 /* Pods_FireChat.framework */; };
 		AC0B7A272A1935C9009DC6BC /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B7A262A1935C9009DC6BC /* SignInViewModel.swift */; };
 		AC0B7A292A195C50009DC6BC /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B7A282A195C50009DC6BC /* SignUpViewModel.swift */; };
-		AC0B7A2C2A1AACAC009DC6BC /* AuthenticationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B7A2B2A1AACAC009DC6BC /* AuthenticationProtocol.swift */; };
 		AC10CD6E28C8438A00F54E57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC10CD6D28C8438A00F54E57 /* AppDelegate.swift */; };
 		AC10CD7028C8438A00F54E57 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC10CD6F28C8438A00F54E57 /* SceneDelegate.swift */; };
 		AC10CD7728C8438C00F54E57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC10CD7628C8438C00F54E57 /* Assets.xcassets */; };
@@ -23,6 +22,8 @@
 		AC9E15942A1041D500A4D16E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E15932A1041D500A4D16E /* Extensions.swift */; };
 		AC9E15962A1139B700A4D16E /* TextFieldContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E15952A1139B700A4D16E /* TextFieldContainerView.swift */; };
 		AC9E15982A1139D100A4D16E /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E15972A1139D100A4D16E /* TextFieldView.swift */; };
+		ACA52B572F4229DC002A2FD8 /* AuthViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA52B562F4229DC002A2FD8 /* AuthViewControllerProtocol.swift */; };
+		ACE9248B2F3B75AA0054630C /* AuthViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9248A2F3B75AA0054630C /* AuthViewModelProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +31,6 @@
 		7DE21369AA6F0630C0B0C17D /* Pods-FireChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireChat.release.xcconfig"; path = "Target Support Files/Pods-FireChat/Pods-FireChat.release.xcconfig"; sourceTree = "<group>"; };
 		AC0B7A262A1935C9009DC6BC /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		AC0B7A282A195C50009DC6BC /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
-		AC0B7A2B2A1AACAC009DC6BC /* AuthenticationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationProtocol.swift; sourceTree = "<group>"; };
 		AC10CD6A28C8438A00F54E57 /* FireChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC10CD6D28C8438A00F54E57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC10CD6F28C8438A00F54E57 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +45,8 @@
 		AC9E15932A1041D500A4D16E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		AC9E15952A1139B700A4D16E /* TextFieldContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldContainerView.swift; sourceTree = "<group>"; };
 		AC9E15972A1139D100A4D16E /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		ACA52B562F4229DC002A2FD8 /* AuthViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewControllerProtocol.swift; sourceTree = "<group>"; };
+		ACE9248A2F3B75AA0054630C /* AuthViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModelProtocol.swift; sourceTree = "<group>"; };
 		E1C40DEBE3F1BB6DFEED3AD4 /* Pods-FireChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireChat.debug.xcconfig"; path = "Target Support Files/Pods-FireChat/Pods-FireChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,12 +70,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		AC0B7A2D2A1AAFC2009DC6BC /* Protocol */ = {
+		AC0B7A2D2A1AAFC2009DC6BC /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				AC0B7A2B2A1AACAC009DC6BC /* AuthenticationProtocol.swift */,
+				ACE9248A2F3B75AA0054630C /* AuthViewModelProtocol.swift */,
+				ACA52B562F4229DC002A2FD8 /* AuthViewControllerProtocol.swift */,
 			);
-			path = Protocol;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		AC10CD6128C8438A00F54E57 = {
@@ -115,7 +118,7 @@
 		AC10CD8128C843B900F54E57 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				AC0B7A2D2A1AAFC2009DC6BC /* Protocol */,
+				AC0B7A2D2A1AAFC2009DC6BC /* Protocols */,
 				AC9E15932A1041D500A4D16E /* Extensions.swift */,
 			);
 			path = Util;
@@ -259,9 +262,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-FireChat/Pods-FireChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-FireChat/Pods-FireChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -298,9 +305,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC10CD6E28C8438A00F54E57 /* AppDelegate.swift in Sources */,
+				ACE9248B2F3B75AA0054630C /* AuthViewModelProtocol.swift in Sources */,
 				AC9E15942A1041D500A4D16E /* Extensions.swift in Sources */,
-				AC0B7A2C2A1AACAC009DC6BC /* AuthenticationProtocol.swift in Sources */,
 				AC0B7A292A195C50009DC6BC /* SignUpViewModel.swift in Sources */,
+				ACA52B572F4229DC002A2FD8 /* AuthViewControllerProtocol.swift in Sources */,
 				AC9E15962A1139B700A4D16E /* TextFieldContainerView.swift in Sources */,
 				AC9E15982A1139D100A4D16E /* TextFieldView.swift in Sources */,
 				AC9E15902A10057A00A4D16E /* SignInScreen.swift in Sources */,

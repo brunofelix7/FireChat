@@ -1,6 +1,6 @@
 import Foundation
 
-struct SignInViewModel : AuthenticationViewModelProtocol {
+struct SignInViewModel : AuthViewModelProtocol {
     
     var user: User = User()
     

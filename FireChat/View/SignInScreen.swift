@@ -2,16 +2,12 @@ import Foundation
 import UIKit
 
 class SignInScreen : UIViewController {
-    
-    // MARK: Properties
-    
+        
     private var viewModel = SignInViewModel()
     private let iconBubble = UIImage(systemName: "bubble.right")
     private let iconEmail = UIImage(resource: .iconEmail)
     private let iconLock = UIImage(resource: .iconLock)
-    
-    // MARK: Views
-    
+        
     private lazy var emailTextField = TextFieldView("E-mail")
     private lazy var passwordTextField = TextFieldView("Password", isPassword: true)
     private lazy var emailContainerView = TextFieldContainerView(iconEmail, emailTextField)
@@ -75,18 +71,13 @@ class SignInScreen : UIViewController {
         return stack
     }()
     
-    
-    // MARK: Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboard()
         configureUI()
         configureTextFieldObservers()
     }
-    
-    // MARK: UI Configurations
-    
+        
     private func configureUI() {
         configureNavBar()
         configureGradientLayer()
@@ -121,9 +112,7 @@ class SignInScreen : UIViewController {
         emailTextField.addTarget(self, action: #selector(textFieldObservers), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(textFieldObservers), for: .editingChanged)
     }
-    
-    // MARK: Selectors
-    
+        
     @objc private func loginUser() {
         print("DEBUG: Login user here...")
         print("DEBUG: email: \(emailTextField.text ?? "")")
@@ -146,9 +135,7 @@ class SignInScreen : UIViewController {
     
 }
 
-// MARK: Extensions
-
-extension SignInScreen : AuthenticationViewControllerProtocol {
+extension SignInScreen : AuthViewControllerProtocol {
     
     func validadeForm() {
         if viewModel.formIsValid {
