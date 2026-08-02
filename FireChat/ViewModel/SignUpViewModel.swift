@@ -6,9 +6,9 @@ struct SignUpViewModel : AuthViewModelProtocol {
     
     var formIsValid: Bool {
         return
-            user.email?.isEmpty == false &&
-            user.name?.isEmpty == false &&
-            user.username?.isEmpty == false &&
-            user.password?.isEmpty == false
+            !user.email.isEmpty &&
+            !user.name.isEmpty &&
+            !user.username.isEmpty &&
+            !user.password.isEmpty
     }
 }
