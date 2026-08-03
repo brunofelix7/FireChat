@@ -3,7 +3,7 @@ import UIKit
 
 private let reuseIdentifier: String = "ConversationCell"
 
-class HomeScreen : UIViewController {
+class HomeView : UIViewController {
     
     private let tableView = UITableView()
     private let profileIcon = UIImage(systemName: "person.circle.fill")
@@ -68,7 +68,7 @@ class HomeScreen : UIViewController {
     }
 }
 
-extension HomeScreen: UITableViewDataSource, UITableViewDelegate {
+extension HomeView: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
@@ -89,5 +89,5 @@ extension HomeScreen: UITableViewDataSource, UITableViewDelegate {
 }
 
 #Preview {
-    return HomeScreen()
+    return HomeView()
 }
